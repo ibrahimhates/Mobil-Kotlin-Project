@@ -8,7 +8,9 @@ import android.view.View
 import com.example.mobil_kotlin_project.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     private  lateinit var binding: ActivityMainBinding
+
     companion object {
         var user: Users? = null
     }
