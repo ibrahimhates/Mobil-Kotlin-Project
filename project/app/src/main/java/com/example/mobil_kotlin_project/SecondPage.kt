@@ -9,13 +9,14 @@ import com.example.mobil_kotlin_project.databinding.ActivitySecondPageBinding
 
 class SecondPage : AppCompatActivity() {
     private lateinit var binding: ActivitySecondPageBinding
+    var user:Users? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var user = MainActivity.user
-        if(user != null)
-            binding.textView.text = "Hosgeldin: \n${user.UserName}"
+        user = MainActivity.user
+        var manager = Manager(binding)
+        manager.startQ()
     }
     /*
     fun backButton(view: View){
