@@ -13,9 +13,8 @@ class SecondPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var user = MainActivity.user
-        if(user != null)
-            binding.textView.text = "Hosgeldin: \n${user.UserName}"
+        var manager = Manager(binding,MainActivity.sharedPreferences,this)
+        manager.GameStarted()
     }
     /*
     fun backButton(view: View){
